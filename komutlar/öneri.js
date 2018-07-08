@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
         
 
                 message.channel.send(embed)
-                kanal.sendEmbed(embed)
+                bot.channels.get("465219721784983603").send(embed)
 
 
         //kod bitiş
