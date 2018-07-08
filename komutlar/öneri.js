@@ -44,7 +44,8 @@ module.exports.run = async (bot, message, args) => {
 
         
 
-                message.channel.send(embed).message.delete(10000)
+                message.channel.send(embed)
+                message.delete(10000)
                 
         
         
