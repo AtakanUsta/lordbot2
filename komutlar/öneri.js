@@ -4,9 +4,10 @@ module.exports.run = async (bot, message, args) => {
 
         //kod başlangıç
 
-
+        let User = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0])
+        if(!User) return message.reply(":warning: `Lütfen Şikayet İstediğin Kullanıcınında İsmini Yaz`");
         let öneri = args.join(" ").slice(22);
-        if(!öneri) return message.reply(":warning: `Lütfen Önerini Yazarak Komutu Kullan`")
+        if(!öneri) return message.reply(":warning: `Kullanım : l!öner @[öneren kişi] [önerin]`")
 
         let kanal = message.guild.channels.get("465219721784983603");
 
