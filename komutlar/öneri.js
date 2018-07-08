@@ -28,9 +28,27 @@ module.exports.run = async (bot, message, args) => {
         .addField("Önerim Nerde Gözüküyor?", `Önerin **https://discord.gg/eaPEC8f** Bu Serverda Öneriler Kanalında Gözükür`)
         .addBlankField()
         
+        
+        
+        let embed2 = new Discord.RichEmbed()
+        .setAuthor("Öneri Sistemi", icon)
+        .setDescription(`${message.author.username} Adlı Kullanıcının Önerisi`)
+        .setColor("#ffa100")
+        .setFooter("LordBot Öneri Sistemi")
+        .setTimestamp()
+        .addBlankField()
+        .addField("Öneride Bulunan Kişi Bilgileri", `**Kullanıcı Adı :** ${message.author.username}n\**Kullanıcının Bulunduğu Server :** ${message.author.guild.name}n\**Kullanıcının Bulunduğu Kanal :**${message.channel}`)
+        .addBlankField()
+        .addField("Önerisi", `${öneri}`)
+        .addBlankField()
 
-                message.channel.send(embed)
-                bot.channels.get("465219721784983603").send(embed)
+        
+
+                message.channel.send(embed).message.delete(10000)
+                
+        
+        
+                bot.channels.get("465219721784983603").send(embed2)
 
 
         //kod bitiş
