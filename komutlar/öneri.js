@@ -37,7 +37,7 @@ module.exports.run = async (bot, message, args) => {
         .setFooter("LordBot Öneri Sistemi")
         .setTimestamp()
         .addBlankField()
-        .addField("Öneride Bulunan Kişi Bilgileri", `**Kullanıcı Adı :** ${message.author.username}n\**Kullanıcının Bulunduğu Server :** ${message.author.guild.name}n\**Kullanıcının Bulunduğu Kanal :**${message.channel}`)
+        .addField("Öneride Bulunan Kişi Bilgileri", `**Kullanıcı Adı :** ${message.author.username} n\**Kullanıcının Bulunduğu Server :** ${message.author.guild.name} n\**Kullanıcının Bulunduğu Kanal :**${message.channel}`)
         .addBlankField()
         .addField("Önerisi", `${öneri}`)
         .addBlankField()
