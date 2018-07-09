@@ -18,8 +18,6 @@
     "npm": "^6.0.1",
     "opusscript": "0.0.6",
     "simple-youtube-api": "^5.0.2",
-    "ytdl-core": "^0.20.4",
-    "discord-rpc": "^3.0.0-beta.8",
-    "discord-rich-presence": "^3.0.0-beta.8"
+    "ytdl-core": "^0.20.4"
   }
 }
