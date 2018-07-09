@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const botconfig = require("./botconfig.json");
 const fs = require("fs");
 const Util = require('discord.js');
-
+const discordrichembed1 = require('discord-rich-presence')('465876766003691545');
+const discordrichembed2 = require('discord-rich-presence')('465878523345895434');
 
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
@@ -75,7 +76,18 @@ bot.commands = new Discord.Collection();
     function ActivityStreaming() {
         return new Promise(resolve => {
           setTimeout(() => {
-            bot.user.setActivity(`Yardım : .yardım`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
+              
+              discordrichembed1.updatePresence({
+                     state: 'Davet Linki Yakında',
+                       details: 'Yardım : l!yardım',
+                       startTimestamp: Date.now(),
+                       endTimestamp: Date.now() + 1337,
+                       largeImageKey: 'buyuk',
+                       smallImageKey: 'kucuk',
+                       instance: true,
+                     });
+              
+                                    // bot.user.setActivity(`Yardım : .yardım`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
             ActivityServers();
           }, 10000);
         });
@@ -83,7 +95,19 @@ bot.commands = new Discord.Collection();
     function ActivityServers() {
         return new Promise(resolve => {
           setTimeout(() => {
-            bot.user.setActivity(`Mustafa Eren ile`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
+              
+                            discordrichembed2.updatePresence({
+                     state: 'Davet Linki Yakında',
+                       details: 'Mustafa Eren ile Yayında',
+                       startTimestamp: Date.now(),
+                       endTimestamp: Date.now() + 1337,
+                       largeImageKey: 'buyuk',
+                       smallImageKey: 'kucuk',
+                       instance: true,
+                     });
+              
+              
+                                    // bot.user.setActivity(`Mustafa Eren ile`, { type: 'STREAMING',url:'http://twitch.tv/mustafaeren'});
             ActivityStreaming();
           }, 10000);
         });
